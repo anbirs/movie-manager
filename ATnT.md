@@ -1,20 +1,9 @@
-# Project: Movie Ticket Booking System
-
-### Prerequisites 
-#### Java: 18+, Maven
-#### Main class: HometaskApplication.class
-#### Database: MySQL 8
-
-❗❗❗Important things not mentioned in requirements implicitly, so not implemented yet: 
-- Check that the showtime is not shorter than the movie duration
-- When a user books a ticket - userId should be taken from authorization
-- Customer has to be able to get only their tickets. Admin sees all the tickets and tickets by showtime
-
-# 📁 Collection: Movies
+# Project: AT T
+# 📁 Collection: Movies 
 
 
 ## End-point: create movie
-<details><summary><strong>Method: POST</strong></summary>
+### Method: POST
 >```
 >http://localhost:8080/v1/movies
 >```
@@ -36,12 +25,12 @@
 |---|---|---|
 |token|{{auth_token}}|string|
 
-</details>
+
 
 ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃
 
 ## End-point: update movie
-<details><summary><strong>Method: PUT</strong></summary>
+### Method: PUT
 >```
 >http://localhost:8080/v1/movies/8
 >```
@@ -63,12 +52,12 @@
 |---|---|---|
 |token|{{auth_token}}|string|
 
-</details>
+
 
 ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃
 
 ## End-point: get movies
-<details><summary><strong>Method: GET</strong></summary>
+### Method: GET
 >```
 >http://localhost:8080/v1/movies
 >```
@@ -77,14 +66,12 @@
 ```json
 
 ```
-</details>
+
 
 ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃
 
 ## End-point: get movies - specific details
-#### specific fields can be sent in the query. 
-#### Available values: <strong>releaseYear,title,genre,rating,duration</strong>
-<details><summary><strong>Method: GET</strong></summary>
+### Method: GET
 >```
 >http://localhost:8080/v1/movies?details=title,releaseYear
 >```
@@ -100,12 +87,12 @@
 |---|---|
 |details|title,releaseYear|
 
-</details>
+
 
 ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃
 
 ## End-point: get movie by id
-<details><summary><strong>Method: GET</strong></summary>
+### Method: GET
 >```
 >http://localhost:8080/v1/movies/8
 >```
@@ -114,12 +101,12 @@
 ```json
 
 ```
-</details>
+
 
 ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃
 
 ## End-point: delete movie by id
-<details><summary><strong>Method: DELETE</strong></summary>
+### Method: DELETE
 >```
 >http://localhost:8080/v1/movies/7
 >```
@@ -135,14 +122,14 @@
 |---|---|---|
 |token|{{auth_token}}|string|
 
-</details>
+
 
 ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃
-# 📁 Collection: Tickets
+# 📁 Collection: Tickets 
 
 
 ## End-point: book ticket
-<details><summary><strong>Method: POST</strong></summary>
+### Method: POST
 >```
 >http://localhost:8080/v1/tickets
 >```
@@ -163,12 +150,12 @@
 |---|---|---|
 |token|{{auth_token}}|string|
 
-</details>
+
 
 ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃
 
 ## End-point: update ticket
-<details><summary><strong>Method: PUT</strong></summary>
+### Method: PUT
 >```
 >http://localhost:8080/v1/tickets/1
 >```
@@ -189,12 +176,12 @@
 |---|---|---|
 |token|{{auth_token}}|string|
 
-</details>
+
 
 ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃
 
 ## End-point: get tickets
-<details><summary><strong>Method: GET</strong></summary>
+### Method: GET
 >```
 >http://localhost:8080/v1/tickets
 >```
@@ -210,12 +197,12 @@
 |---|---|---|
 |token|{{auth_token}}|string|
 
-</details>
+
 
 ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃
 
 ## End-point: get tickets by User
-<details><summary><strong>Method: GET</strong></summary>
+### Method: GET
 >```
 >http://localhost:8080/v1/tickets/user/2
 >```
@@ -231,12 +218,12 @@
 |---|---|---|
 |token|{{auth_token}}|string|
 
-</details>
+
 
 ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃
 
 ## End-point: get tickets by Showtime
-<details><summary><strong>Method: GET</strong></summary>
+### Method: GET
 >```
 >http://localhost:8080/v1/tickets/showtime/2
 >```
@@ -252,12 +239,12 @@
 |---|---|---|
 |token|{{auth_token}}|string|
 
-</details>
+
 
 ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃
 
 ## End-point: get ticket by id
-<details><summary><strong>Method: GET</strong></summary>
+### Method: GET
 >```
 >http://localhost:8080/v1/tickets/1
 >```
@@ -273,12 +260,12 @@
 |---|---|---|
 |token|{{auth_token}}|string|
 
-</details>
+
 
 ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃
 
 ## End-point: delete ticket by id
-<details><summary><strong>Method: DELETE</strong></summary>
+### Method: DELETE
 >```
 >http://localhost:8080/v1/tickets/12
 >```
@@ -294,14 +281,14 @@
 |---|---|---|
 |token|{{auth_token}}|string|
 
-</details>
+
 
 ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃
-# 📁 Collection: Showtimes
+# 📁 Collection: Showtimes 
 
 
 ## End-point: create showtime
-<details><summary><strong>Method: POST</strong></summary>
+### Method: POST
 >```
 >http://localhost:8080/v1/showtimes
 >```
@@ -323,12 +310,12 @@
 |---|---|---|
 |token|{{auth_token}}|string|
 
-</details>
+
 
 ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃
 
 ## End-point: update showtime
-<details><summary><strong>Method: PUT</strong></summary>
+### Method: PUT
 >```
 >http://localhost:8080/v1/showtimes/3
 >```
@@ -353,12 +340,12 @@
 |---|---|---|
 |token|{{auth_token}}|string|
 
-</details>
+
 
 ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃
 
 ## End-point: get showtimes
-<details><summary><strong>Method: GET</strong></summary>
+### Method: GET
 >```
 >http://localhost:8080/v1/showtimes
 >```
@@ -374,12 +361,12 @@
 |---|---|---|
 |token|{{auth_token}}|string|
 
-</details>
+
 
 ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃
 
 ## End-point: get showtimes by Movie
-<details><summary><strong>Method: GET</strong></summary>
+### Method: GET
 >```
 >http://localhost:8080/v1/showtimes?movieId=8
 >```
@@ -395,12 +382,12 @@
 |---|---|
 |movieId|8|
 
-</details>
+
 
 ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃
 
 ## End-point: get showtimes by Cinema
-<details><summary><strong>Method: GET</strong></summary>
+### Method: GET
 >```
 >http://localhost:8080/v1/showtimes?theaterName=screeN
 >```
@@ -416,12 +403,12 @@
 |---|---|
 |theaterName|screeN|
 
-</details>
+
 
 ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃
 
 ## End-point: get showtime by id
-<details><summary><strong>Method: GET</strong></summary>
+### Method: GET
 >```
 >http://localhost:8080/v1/showtimes/1
 >```
@@ -430,12 +417,12 @@
 ```json
 
 ```
-</details>
+
 
 ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃
 
 ## End-point: delete showtime by id
-<details><summary><strong>Method: DELETE</strong></summary>
+### Method: DELETE
 >```
 >http://localhost:8080/v1/showtimes/1
 >```
@@ -451,14 +438,14 @@
 |---|---|---|
 |token|{{auth_token}}|string|
 
-</details>
+
 
 ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃
-# 📁 Collection: Users
+# 📁 Collection: Users 
 
 
 ## End-point: register Customer
-<details><summary><strong>Method: POST</strong></summary>
+### Method: POST
 >```
 >http://localhost:8080/v1/users/register/customer
 >```
@@ -468,7 +455,7 @@
 {
     "username": "Lola",
     "email": "use2@mail.as",
-    "password": "****"
+    "password": "160"
 }
 ```
 
@@ -477,12 +464,12 @@
 |Param|value|Type|
 |---|---|---|
 
-</details>
+
 
 ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃
 
 ## End-point: register Admin
-<details><summary><strong>Method: POST</strong></summary>
+### Method: POST
 >```
 >http://localhost:8080/v1/users/register/admin
 >```
@@ -492,7 +479,7 @@
 {
     "username": "Lola",
     "email": "use2@mail.as",
-    "password": "****"
+    "password": "160"
 }
 ```
 
@@ -502,12 +489,12 @@
 |---|---|---|
 |token|{{auth_token}}|string|
 
-</details>
+
 
 ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃
 
 ## End-point: get users
-<details><summary><strong>Method: GET</strong></summary>
+### Method: GET
 >```
 >http://localhost:8080/v1/users
 >```
@@ -523,12 +510,12 @@
 |---|---|---|
 |token|{{auth_token}}|string|
 
-</details>
+
 
 ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃
 
 ## End-point: delete user by id
-<details><summary><strong>Method: DELETE</strong></summary>
+### Method: DELETE
 >```
 >http://localhost:8080/v1/users/1
 >```
@@ -544,14 +531,14 @@
 |---|---|---|
 |token|{{auth_token}}|string|
 
-</details>
+
 
 ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃
-# 📁 Collection: Auth
+# 📁 Collection: Auth 
 
 
 ## End-point: login
-<details><summary><strong>Method: POST</strong></summary>
+### Method: POST
 >```
 >http://localhost:8080/v1/auth/login
 >```
@@ -560,10 +547,10 @@
 ```json
 {
     "username": "Kiki",
-    "password": "****"
+    "password": "160"
 }
 ```
-</details>
+
 
 ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃
 _________________________________________________
