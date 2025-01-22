@@ -5,7 +5,7 @@
 #### Main class: HometaskApplication.class
 #### Database: MySQL 8
 
-❗❗❗Important things not mentioned in requirements implicitly, so not implemented yet: 
+❗❗❗Important things not mentioned in the requirements explicitly, so not implemented yet: 
 - Check that the showtime is not shorter than the movie duration
 - When a user books a ticket - userId should be taken from authorization
 - Customer has to be able to get only their tickets. Admin sees all the tickets and tickets by showtime
