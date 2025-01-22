@@ -1,7 +1,7 @@
 # Project: Movie Ticket Booking System
 
 ### Prerequisites 
-#### Java: 18+, Maven
+#### Java: 18, Maven
 #### Main class: HometaskApplication.class
 #### Database: MySQL 8
 

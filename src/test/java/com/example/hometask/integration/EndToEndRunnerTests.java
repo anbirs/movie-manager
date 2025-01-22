@@ -31,7 +31,7 @@ import java.util.List;
 
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
 @Testcontainers
-public class EndToEndTestRunnerIT {
+public class EndToEndRunnerTests {
 
     @Autowired
     private MovieRepository movieRepository;
